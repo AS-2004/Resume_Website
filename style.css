@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Labrada', serif;
+    background-color: #f4f4f9;
+    color: #1b1b1b;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0.5rem 0;
+}
+
+header {
+    background: #fff;
+    /* Reduced padding to decrease height */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-logo span {
+    color: #7700ff;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+nav ul a:hover {
+    color: #7700ff;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 4rem 0;
+    background: linear-gradient(to bottom right, #fefefe, #e6e6ff);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.hero h1 span {
+    color: #7700ff;
+}
+
+.hero h2 {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.btn-wrapper {
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: #7700ff;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #5a00cc;
+}
+
+.btn-secondary {
+    background-color: #e4ccff;
+    color: #7700ff;
+}
+
+.icon-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.icon-wrapper a {
+    font-size: 1.5rem;
+    background: #1b1b1b;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.icon-wrapper a:hover {
+    background-color: #7700ff;
+}
+
+section {
+    padding: 2rem 0;
+    border-bottom: 1px solid #ddd;
+    scroll-margin-top: 60px;
+    /* Adjusted to match the new nav height */
+}
+
+.heading-2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.heading-2 span {
+    color: #7700ff;
+}
+
+.about .container,
+.education .container,
+.projects .container,
+.contact .container {
+    max-width: 900px;
+}
+
+.about .content p,
+.projects ul li,
+.education ul li,
+.contact p {
+    margin-bottom: 1rem;
+}
+
+.skills-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 1rem 2rem;
+    flex-wrap: wrap;
+    font-size: 1.1rem;
+}
+
+footer {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Add styles for the profile image */
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Add hover effect */
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+    /* Slight zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Enhance shadow on hover */
+}
+
+/* Reduce image size on mobile */
+@media (max-width: 768px) {
+    .profile-img {
+        width: 200px;
+        /* Smaller width for mobile */
+        height: 200px;
+        /* Smaller height for mobile */
+    }
+
+    .hero {
+        flex-direction: column;
+        /* Stack image and text vertically */
+        text-align: center;
+        /* Center-align text */
+    }
+
+    .btn-wrapper {
+        justify-content: center;
+        /* Center buttons on mobile */
+    }
+
+    .icon-wrapper {
+        justify-content: center;
+        /* Center icons on mobile */
+    }
+
+    section {
+        padding: 2rem 0;
+        border-bottom: 1px solid #ddd;
+        scroll-margin-top: 90px;
+        /* Adjusted to match the new nav height */
+    }
+}
